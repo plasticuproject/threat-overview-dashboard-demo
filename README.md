@@ -33,7 +33,7 @@ You should see the Threat Overview Dashboard Demo, which showcases the interacti
 
 ## Screenshots
 
-![LOGIN](screenshot/login.png)
+![LOGIN](screenshots/login.png)
 ![TOP](screenshots/top.png)
 ![MID](screenshots/mid.png)
 ![BOTTOM](screenshots/bottom.png)
