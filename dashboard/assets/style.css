@@ -1,0 +1,54 @@
+/* Base styles for graph-container */
+.graph-container {
+    /* Flex properties allow for flexible layouts that can adapt to available space */
+    flex: 1; /* Allow the container to grow and shrink */
+    margin-right: 30px; /* Space between containers */
+    margin-left: 30px; /* Space to the left */
+}
+
+/* Remove side margins for the last graph container */
+.graph-container:last-child {
+   margin-right: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1000px) {
+    .graph-container {
+        flex: 0 0 100%; /* Don't grow or shrink, take full width */
+        max-width: 100%; /* Ensure it doesn't grow beyond 100% */
+        margin-right: 0; /* No space to the right */
+        margin-left: 0; /* No space to the left */
+        min-width: 0; /* Override any larger min-width for mobile */
+    }
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 1001px) {
+    .graph-container {
+        /* flex-grow: 1 ensures the containers can grow to fill available space */
+        flex: 1; /* This replaces the previous flex property */
+        min-width: 300px; /* Ensures containers are at least 300px wide */
+        /* margin-right/left are already defined in the base styles */
+    }
+}
+
+/*DataTable customizations*/
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner input:not([type=radio]):not([type=checkbox]){
+    color: white!important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th.dash-filter input.dash-filter--case--sensitive {
+	border-color: #3B78E6!important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th:hover [class^="column-header--"]:not(.disabled), .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th:hover [class^="dash-filter--"]:not(.disabled) {
+	color: #3B78E6!important;
+}
+
+.dash-table-container .previous-next-container button.previous-page:hover, .dash-table-container .previous-next-container button.next-page:hover, .dash-table-container .previous-next-container button.first-page:hover, .dash-table-container .previous-next-container button.last-page:hover {
+	color: #3B78E6!important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table {
+    --hover: #3B78E6!important;
+}
